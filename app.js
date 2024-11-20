@@ -1,19 +1,8 @@
-const express = require('express');
+import express from "express";
 
 const app = express();
 
 app.use(express.json());
-
-livros = [
-  {
-    id: 1,
-    titulo: 'O Hobbit'
-  },
-  {
-    id: 2,
-    titulo: 'Senhor dos Aneis'
-  }
-]
 
 function buscalivro(id) {
   return livros.findindex( livro => {
@@ -46,4 +35,4 @@ app.delete('/livros/:id', (req, res) => {
   res.status(200).send('livro removido com sucesso');
   
 })
-module.exports = app;
+export default app;
